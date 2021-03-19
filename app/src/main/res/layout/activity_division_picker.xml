@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="top.defaults.pickerviewapp.MainActivity">
+
+    <top.defaults.view.DivisionPickerView
+        android:id="@+id/divisionPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:preferredMaxOffsetItemCount="4"
+        app:divisionPickerType="provinceAndCity"
+        android:background="#e7e7e7"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"/>
+
+    <ToggleButton
+        android:id="@+id/toggleType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="省市区"
+        android:textOff="省市"/>
+
+</LinearLayout>
