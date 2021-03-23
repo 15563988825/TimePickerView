@@ -75,7 +75,7 @@ public class DateChoosePopWindow extends PopupWindow implements View.OnClickList
             onActionListener.onDismiss(DateChoosePopWindow.this);
         }
         if (view.getId() == R.id.tv_ok) {
-            onActionListener.onConfirm(pv_timer.getSelectedDate());
+            onActionListener.onConfirm(this,pv_timer.getSelectedDate());
         }
     }
 
@@ -84,6 +84,6 @@ public class DateChoosePopWindow extends PopupWindow implements View.OnClickList
 
         public void onCancel(DateChoosePopWindow pop);
 
-        public void onConfirm(Calendar date);
+        public void onConfirm(DateChoosePopWindow pop,Calendar date);
     }
 }

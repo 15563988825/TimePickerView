@@ -67,13 +67,13 @@ public class SingleChoosePopWindow extends PopupWindow implements View.OnClickLi
             onActionListener.onDismiss(SingleChoosePopWindow.this);
         }
         if (view.getId() == R.id.tv_ok) {
-            onActionListener.onConfirm(pv_picker.getSelected_position(), pv_picker.getSelected_value());
+            onActionListener.onConfirm(this,pv_picker.getSelected_position(), pv_picker.getSelected_value());
         }
     }
 
     public interface OnActionListener {
         public void onDismiss(SingleChoosePopWindow pop);
         public void onCancel(SingleChoosePopWindow pop);
-        public void onConfirm(int position, String value);
+        public void onConfirm(SingleChoosePopWindow pop,int position, String value);
     }
 }
