@@ -1,7 +1,7 @@
 ##TimePickerView
 Useage:
 ```
-implementation 'com.wangyunxiu.lib:picker-view:0.1'
+implementation 'com.wangyunxiu.lib:picker-view:0.2'
 ```
 And Code:
 时间选择器
@@ -39,16 +39,29 @@ pop.showAtLocation(getWindow().getDecorView(), Gravity.BOTTOM, 0, 0);
 SingleChoosePopWindow pop = new SingleChoosePopWindow(this,items, new SingleChoosePopWindow.OnActionListener() {
             @Override
             public void onDismiss(SingleChoosePopWindow pop) {
-                bgAlpha(1.0f);
+  
             }
             @Override
             public void onCancel(SingleChoosePopWindow pop) {
             }
             @Override
             public void onConfirm(int position, String value) {
-                Log.i("asds",value);
             }
         });
 
 pop.showAtLocation(getWindow().getDecorView(), Gravity.BOTTOM, 0, 0);
 ```
+
+
+时间获取
+```
+Calendar date = pv_timer.getSelectedDate();
+int year = date.get(Calendar.YEAR);
+int month = date.get(Calendar.MONTH);
+int dayOfMonth = date.get(Calendar.DAY_OF_MONTH);
+int hour = date.get(Calendar.HOUR_OF_DAY);
+int minute = date.get(Calendar.MINUTE);
+tv_title.setText(year + "年" + month + "月" + dayOfMonth + "日");
+```
+
+
