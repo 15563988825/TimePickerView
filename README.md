@@ -14,7 +14,7 @@ TimeChoosePopWindow pop=new TimeChoosePopWindow(this, new TimeChoosePopWindow.On
             public void onCancel(TimeChoosePopWindow pop) {
             }
             @Override
-            public void onConfirm(Calendar date) {
+            public void onConfirm(TimeChoosePopWindow pop,Calendar date) {
             }
         });
 pop.showAtLocation(getWindow().getDecorView(), Gravity.BOTTOM, 0, 0);
@@ -29,7 +29,7 @@ DateChoosePopWindow pop=new DateChoosePopWindow(this, new DateChoosePopWindow.On
             public void onCancel(DateChoosePopWindow pop) {
             }
             @Override
-            public void onConfirm(Calendar date) {
+            public void onConfirm(DateChoosePopWindow pop,Calendar date) {
             }
         });
 pop.showAtLocation(getWindow().getDecorView(), Gravity.BOTTOM, 0, 0);
@@ -45,7 +45,7 @@ SingleChoosePopWindow pop = new SingleChoosePopWindow(this,items, new SingleChoo
             public void onCancel(SingleChoosePopWindow pop) {
             }
             @Override
-            public void onConfirm(int position, String value) {
+            public void onConfirm(SingleChoosePopWindow pop,int position, String value) {
             }
         });
 
