@@ -638,7 +638,7 @@ public class DateTimePickerView extends PickerViewGroup {
         if (datePickerView != null) {
             datePickerView.setOnSelectedItemChangedListener(null);
             int dateSelection = TimeUtils.daySwitchesBetween(startDate, selectedDate);
-            datePickerView.setSelectedItemPosition(dateSelection);
+            datePickerView.setSelectedItemPosition(dateSelection-1);
 
             datePickerView.setOnSelectedItemChangedListener(new PickerView.OnSelectedItemChangedListener() {
                 @Override
