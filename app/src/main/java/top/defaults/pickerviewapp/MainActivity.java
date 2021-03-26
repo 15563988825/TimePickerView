@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             public void onCancel(SingleChoosePopWindow pop) {
             }
             @Override
-            public void onConfirm(int position, String value) {
+            public void onConfirm(SingleChoosePopWindow pop,int position, String value) {
                 Log.i("asds",value);
             }
         });

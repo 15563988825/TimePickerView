@@ -32,6 +32,7 @@ public class TimeChoosePopWindow extends PopupWindow implements View.OnClickList
         tv_cancel = view.findViewById(R.id.tv_cancel);
         tv_cancel.setOnClickListener(this);
         tv_ok = view.findViewById(R.id.tv_ok);
+        tv_ok.setOnClickListener(this);
         pv_timer = view.findViewById(R.id.pv_timer);
         pv_timer.setOnSelectedDateChangedListener(new DateTimePickerView.OnSelectedDateChangedListener() {
             @Override

@@ -6,7 +6,7 @@ def gitUrl = 'https://github.com/15563988825/TimePickerView.git' // Git仓库的
 
 group = "com.wangyunxiu.lib"
 
-version = "0.3"
+version = "0.5"
 
 install {
     repositories.mavenInstaller {
