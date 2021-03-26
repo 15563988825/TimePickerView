@@ -1,7 +1,7 @@
 ##TimePickerView
 Useage:
 ```
-implementation 'com.wangyunxiu.lib:picker-view:0.4'
+implementation 'com.wangyunxiu.lib:picker-view:0.5'
 ```
 And Code:
 时间选择器
