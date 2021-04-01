@@ -5,6 +5,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
@@ -69,6 +70,13 @@ public class SingleChoosePopWindow extends PopupWindow implements View.OnClickLi
         if (view.getId() == R.id.tv_ok) {
             onActionListener.onConfirm(this,pv_picker.getSelected_position(), pv_picker.getSelected_value());
         }
+    }
+
+    @Override
+    public void showAtLocation(View parent, int gravity, int x, int y) {
+        super.showAtLocation(parent, gravity, x, y);
+        InputMethodManager inputmanger = (InputMethodManager) parent.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputmanger.hideSoftInputFromWindow(parent.getWindowToken(), 0);
     }
 
     public interface OnActionListener {

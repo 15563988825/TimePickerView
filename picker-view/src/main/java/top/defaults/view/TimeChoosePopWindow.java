@@ -5,6 +5,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
@@ -76,6 +77,13 @@ public class TimeChoosePopWindow extends PopupWindow implements View.OnClickList
         if (view.getId() == R.id.tv_ok) {
             onActionListener.onConfirm(this,pv_timer.getSelectedDate());
         }
+    }
+
+    @Override
+    public void showAtLocation(View parent, int gravity, int x, int y) {
+        super.showAtLocation(parent, gravity, x, y);
+        InputMethodManager inputmanger = (InputMethodManager) parent.getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputmanger.hideSoftInputFromWindow(parent.getWindowToken(), 0);
     }
 
     public interface OnActionListener {
